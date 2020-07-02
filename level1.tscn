@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+[ext_resource path="res://scripts/CameraMoveByWindow.gd" type="Script" id=2]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="icon" type="Sprite" parent="."]
+position = Vector2( 872, 600 )
+texture = ExtResource( 1 )
+offset = Vector2( -807.898, -536 )
+
+[node name="icon2" type="Sprite" parent="."]
+position = Vector2( 872, 600 )
+texture = ExtResource( 1 )
+offset = Vector2( -552, -280 )
+
+[node name="icon3" type="Sprite" parent="."]
+position = Vector2( 1383.9, 1112 )
+texture = ExtResource( 1 )
+offset = Vector2( -807.898, -536 )
+
+[node name="icon4" type="Sprite" parent="."]
+position = Vector2( 1384, 1112 )
+texture = ExtResource( 1 )
+offset = Vector2( -552, -280 )
+
+[node name="TheCamera" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+script = ExtResource( 2 )
