@@ -19,6 +19,10 @@ config/name="BLAWK Remake"
 run/main_scene="res://level1.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+WindowScaler="*res://scripts/WindowScaler.gd"
+
 [display]
 
 window/size/resizable=false
