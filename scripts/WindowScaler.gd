@@ -4,7 +4,7 @@ var game_offset: Vector2
 var game_scale: float
 
 func set_window_position(position: Vector2):
-	OS.indow_position = position * game_scale + game_offset
+	OS.window_position = position * game_scale + game_offset
 
 func get_window_position() -> Vector2:
 	return (OS.window_position - game_offset) / game_scale 
