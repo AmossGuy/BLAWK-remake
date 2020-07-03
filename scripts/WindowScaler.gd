@@ -16,6 +16,11 @@ func _ready():
 	var screen := OS.get_current_screen()
 	
 	game_offset = OS.get_screen_position(screen)
-	game_scale = 0.5
 	
-	set_window_size(Vector2(680, 384))
+	var scales = OS.get_screen_size(screen) / Vector2(1920, 1080)
+	game_scale = min(scales.x, scales.y)
+	
+	game_offset += (OS.get_screen_size(screen) - Vector2(1920, 1080)*game_scale) / 2
+	
+	var original_window_size := OS.window_size
+	set_window_size(original_window_size)
