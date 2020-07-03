@@ -25,6 +25,8 @@ WindowScaler="*res://scripts/WindowScaler.gd"
 
 [display]
 
+window/size/width=680
+window/size/height=384
 window/size/resizable=false
 window/per_pixel_transparency/allowed=true
 window/stretch/mode="2d"
