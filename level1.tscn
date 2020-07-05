@@ -51,6 +51,7 @@ shape = SubResource( 2 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2( 352, 608 )
+can_sleep = false
 
 [node name="ball" type="Sprite" parent="RigidBody2D"]
 texture = ExtResource( 1 )
