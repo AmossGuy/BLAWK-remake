@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://ball.svg" type="Texture" id=1]
 [ext_resource path="res://scripts/CameraMoveByWindow.gd" type="Script" id=2]
@@ -6,6 +6,10 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10000, 10000 )
+
+[sub_resource type="PhysicsMaterial" id=3]
+friction = 0.3
+bounce = 0.2
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 32.0
@@ -42,7 +46,10 @@ shape = SubResource( 1 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2( 352, 608 )
+physics_material_override = SubResource( 3 )
 can_sleep = false
+linear_damp = 0.3
+angular_damp = 0.3
 
 [node name="ball" type="Sprite" parent="RigidBody2D"]
 z_index = 1
